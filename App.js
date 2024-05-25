@@ -5,6 +5,8 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Box />
+      <Box />
+      <Box />
       {/* <View style={styles.darkMode}>
         <Text>Style inheritance</Text>
       </View>
@@ -22,6 +24,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "plum",
+    flexDirection: "column",
     padding: 60,
   },
   darkMode: {
