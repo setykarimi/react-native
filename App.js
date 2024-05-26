@@ -1,12 +1,12 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import Box from "./components/box";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Box />
-      <Box />
-      <Box />
+      <Box color="blue" />
+      <Box color="red" />
+      <Box color="green" />
       {/* <View style={styles.darkMode}>
         <Text>Style inheritance</Text>
       </View>
@@ -23,9 +23,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "flex-center",
     backgroundColor: "plum",
     flexDirection: "column",
     padding: 60,
+    
   },
   darkMode: {
     backgroundColor: "black",
