@@ -4,9 +4,12 @@ import Box from "./components/box";
 export default function App() {
   return (
     <View style={styles.container}>
-      <Box color="blue" />
-      <Box color="red" />
-      <Box color="green" />
+      <Box style={{backgroundColor: "blue", alignSelf: "flex-start"}} />
+      <Box style={{backgroundColor: "red", alignSelf: "flex-end"}} />
+      <Box style={{backgroundColor: "green", alignSelf: "center"}} />
+      <Box style={{backgroundColor: "green", alignSelf: "stretch"}} />
+      <Box style={{backgroundColor: "lightGreen"}} />
+      <Box style={{backgroundColor: "lightRed"}} />
       {/* <View style={styles.darkMode}>
         <Text>Style inheritance</Text>
       </View>
@@ -27,7 +30,8 @@ const styles = StyleSheet.create({
     backgroundColor: "plum",
     flexDirection: "column",
     padding: 60,
-    
+    alignSelf: "stretch",
+    flexWrap: "wrap-reverse"
   },
   darkMode: {
     backgroundColor: "black",

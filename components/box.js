@@ -1,11 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Box({ color }) {
+export default function Box({style}) {
   return (
     <View
-      style={{
-        backgroundColor: color,
-      }}
+      style={style}
     >
       <Text style={styles.text}>Box</Text>
     </View>
