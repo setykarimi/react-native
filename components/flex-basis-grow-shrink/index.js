@@ -70,6 +70,11 @@ const FlexBasisGrowShrink = () => {
   );
 };
 
+
+// "FLex vs FLex Grow"
+// If we set flex to positive number is equal to flexGrow:<positive number>, flexShrink: 1, flexBasis: 0
+
+
 export default FlexBasisGrowShrink
 
 const BoxInfo = ({color, flexBasis, flexShrink, setStyle, flexGrow}) => (

@@ -1,9 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function Box({ style }) {
+export default function Box({ style , children}) {
   return (
     <View style={style}>
-      <Text style={styles.text}>Box</Text>
+      <Text style={styles.text}>{children}</Text>
     </View>
   );
 }
