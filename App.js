@@ -1,5 +1,5 @@
 import SafeArea from "./components/safe-area";
-
+import CustomButton from "./components/button";
 export default function App() {
   return (
     <>
