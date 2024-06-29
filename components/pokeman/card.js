@@ -4,7 +4,7 @@ import { Image, Platform, StyleSheet, Text, View } from "react-native";
 const getTypeDetails = (type) => {
   switch (type.toLowerCase()) {
     case "electric":
-      return { borderColor: "#FFD700", emoji: "💫" };
+      return { borderColor: "#FFD700", emoji: "⚡" };
     case "water":
       return { borderColor: "#6493EA", emoji: "💧" };
     case "fire":
@@ -59,8 +59,9 @@ export default function PokemanCard({
 const styles = StyleSheet.create({
   card: {
     backgroundColor: "white",
-    borderRadius: 16,
-    borderWidth: 2,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#6b7280",
     padding: 16,
     margin: 16,
     ...Platform.select({
@@ -90,6 +91,7 @@ const styles = StyleSheet.create({
   image: {
     width: "100%",
     height: 200,
+    marginBottom: 10
   },
   typeContainer: {
     alignItems: "center",
@@ -100,7 +102,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 6,
     paddingHorizontal: 12,
-    borderRadius: 20,
+    borderRadius: 10,
     borderWidth: 4,
   },
   typeEmoji: {
