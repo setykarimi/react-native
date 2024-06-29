@@ -1,13 +1,20 @@
 import React from "react";
-import { ScrollView, StatusBar, StyleSheet, Text, View } from "react-native";
+import {
+  FlatList,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import pokemanList from "../../data.json";
-import SafeArea from "../safe-area";
 
-export default function PokemanList() {
+export default function RnList() {
   return (
-    <SafeArea style={styles.container}>
-      <ScrollView style={styles.scrollView}>
+    <SafeAreaView style={styles.container}>
+      {/* <ScrollView style={styles.scrollView}>
         {pokemanList.map((pokeman) => {
+          console.log(pokeman.id);
           return (
             <View key={pokeman.id} style={styles.card}>
               <Text style={styles.cardText}>{pokeman.type}</Text>
@@ -15,8 +22,25 @@ export default function PokemanList() {
             </View>
           );
         })}
-      </ScrollView>
-    </SafeArea>
+      </ScrollView> */}
+      <View styles={styles.scrollView}>
+        <FlatList
+          data={pokemanList}
+          renderItem={({ item }) => {
+            console.log(item.id);
+            return (
+              <View key={item.id} style={styles.card}>
+                <Text style={styles.cardText}>{item.type}</Text>
+                <Text>{item.name}</Text>
+              </View>
+            );
+          }}
+          keyExtractor={(item) => item.id.toString()}
+          ItemSeparatorComponent={<View style={{height: 16}}/>}
+          // horizontal
+        />
+      </View>
+    </SafeAreaView>
   );
 }
 
@@ -24,6 +48,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#f5f5f5",
+    // StatusBar.currentHeight : this means that the padding does not affect in IOS device
     paddingTop: StatusBar.currentHeight,
   },
   scrollView: {
@@ -34,9 +59,9 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 16,
     borderWidth: 1,
-    marginBottom: 16
+    // marginBottom: 16,
   },
   cardText: {
-    fontSize: 30
-  }
+    fontSize: 30,
+  },
 });
