@@ -38,6 +38,9 @@ export default function RnList() {
           keyExtractor={(item) => item.id.toString()}
           ItemSeparatorComponent={<View style={{height: 16}}/>}
           // horizontal
+          ListEmptyComponent={<Text>No items found</Text>}
+          ListHeaderComponent={<Text style={styles.headerList}>Pokeman List</Text>}
+          ListFooterComponent={<Text style={styles.footerList}>End of List</Text>}
         />
       </View>
     </SafeAreaView>
@@ -64,4 +67,15 @@ const styles = StyleSheet.create({
   cardText: {
     fontSize: 30,
   },
+  headerList: {
+    fontSize:24,
+    textAlign: 'center',
+    marginBottom: 12,
+    fontWeight: '800'
+  },
+  footerList: {
+    fontSize: 24,
+    textAlign: 'center',
+    marginTop: 12
+  }
 });
