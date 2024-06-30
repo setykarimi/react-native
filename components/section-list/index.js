@@ -13,7 +13,7 @@ import groupedData from "../../grouped-data.json";
 export default function SectionListComp() {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.scrollView}>
+      <View style={styles.scrollView}>
         <SectionList
           sections={groupedData}
           renderItem={({ item }) => {
@@ -29,7 +29,7 @@ export default function SectionListComp() {
           ItemSeparatorComponent={()=> <View style={{height: 16}}/>}
           SectionSeparatorComponent={()=> <View style={{height: 24}}/>}
         />
-      </ScrollView>
+      </View>
     </SafeAreaView>
   );
 }
