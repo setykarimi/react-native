@@ -1,6 +1,7 @@
 import { Platform, SafeAreaView, ScrollView, StyleSheet } from "react-native";
 import PokemanCard from "./components/pokeman/card";
 import RnList from "./components/rn-list";
+import SectionListComp from "./components/section-list";
 export default function App() {
   const data = [
     {
@@ -38,7 +39,8 @@ export default function App() {
   ];
 
   return (
-    <RnList />
+    // <RnList />
+    <SectionListComp />
     // <SafeAreaView style={styles.container}>
     //   <ScrollView>
     //     {data.map((item) => (
