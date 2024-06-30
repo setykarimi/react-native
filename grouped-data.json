@@ -1,0 +1,18 @@
+[
+  {
+    "type": "Grass",
+    "data": ["Bulbasure", "Ivsaur", "Venusaur"]
+  },
+  {
+    "type": "Fire",
+    "data": ["Bulbasure", "Ivsaur", "Venusaur"]
+  },
+  {
+    "type": "Water",
+    "data": ["Bulbasure", "Ivsaur", "Venusaur"]
+  },
+  {
+    "type": "Electric",
+    "data": ["Bulbasure", "Ivsaur"]
+  }
+]
