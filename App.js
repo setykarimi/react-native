@@ -3,6 +3,7 @@ import PokemanCard from "./components/pokeman/card";
 import RnList from "./components/rn-list";
 import SectionListComp from "./components/section-list";
 import RnForms from "./components/rn-forms";
+import LoginForm from "./components/rn-forms/login-form";
 export default function App() {
   const data = [
     {
@@ -42,7 +43,8 @@ export default function App() {
   return (
     // <RnList />
     // <SectionListComp />
-    <RnForms />
+    // <RnForms />
+    <LoginForm />
     // <SafeAreaView style={styles.container}>
     //   <ScrollView>
     //     {data.map((item) => (
