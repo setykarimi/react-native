@@ -3,12 +3,15 @@ import {
   SafeAreaView,
   StatusBar,
   StyleSheet,
+  Switch,
   Text,
   TextInput,
+  View,
 } from "react-native";
 
 export default function RnForms() {
   const [name, setName] = useState("");
+  const [isDarkMode, setIsDarkMode] = useState(false)
   return (
     <SafeAreaView style={styles.container}>
       <TextInput
@@ -21,7 +24,20 @@ export default function RnForms() {
         // secureTextEntry
         // keyboardType="numeric"
       />
+      <TextInput
+        style={[styles.input, styles.multiLine]}
+        placeholder="message"
+        multiline
+      />
       <Text> My name is {name}</Text>
+
+      <View style={styles.switchContainer}>
+        <Text style={styles.text}>Dark mode</Text>
+        <Switch value={isDarkMode} onValueChange={()=> setIsDarkMode(prv=> !prv)}
+          trackColor={{false: "#767577", true: 'lightblue'}}
+          thumbColor="#f4f3f4"
+          />
+      </View>
     </SafeAreaView>
   );
 }
@@ -38,4 +54,18 @@ const styles = StyleSheet.create({
     margin: 16,
     borderWidth: 2,
   },
+  multiLine: {
+    minHeight: 100,
+    textAlignVertical: "top",
+  },
+  switchContainer: {
+    flexDirection: 'row',
+    alignItems:'center',
+    justifyContent: "space-between",
+    paddingHorizontal: 10
+  },
+  text:{
+fontSize:30,
+fontWeight: '700'
+  }
 });
