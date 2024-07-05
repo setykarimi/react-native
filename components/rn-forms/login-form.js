@@ -17,12 +17,21 @@ export default function LoginForm() {
 
   const validateForm = () => {
     let errors = {};
-    if (!username) error.username = "Username is required";
-    if (!password) error.username = "Password is required";
+    if (!username) errors.username = "Username is required";
+    if (!password) errors.password = "Password is required";
 
     setError(errors);
 
     return Object.keys(errors).length === 0;
+  };
+
+  const handleSubmit = () => {
+    if (validateForm()) {
+      console.log("Submited", username, password);
+      setUsername("");
+      setPassword("");
+      setError({});
+    }
   };
 
   return (
@@ -38,21 +47,28 @@ export default function LoginForm() {
         />
         <Text style={styles.label}>Username</Text>
         <TextInput
+        value={username}
           style={styles.input}
           placeholder="Enter your username"
           onChangeText={setUsername}
         />
-        {error.username && <Text style={styles.error}>{error.username}</Text>}
+        {error.username ? (
+          <Text style={styles.error}>{error.username}</Text>
+        ) : null}
+
         <Text style={styles.label}>Password</Text>
         <TextInput
+        value={password}
           style={styles.input}
           placeholder="Enter your password"
           secureTextEntry
           onChangeText={setPassword}
         />
-        {error.username && <Text style={styles.error}>{error.password}</Text>}
+        {error.password ? (
+          <Text style={styles.error}>{error.password}</Text>
+        ) : null}
 
-        <Button title="Login" onPress={() => validateForm()} />
+        <Button title="Login" onPress={handleSubmit} />
       </View>
     </KeyboardAvoidingView>
   );
@@ -99,6 +115,7 @@ const styles = StyleSheet.create({
   },
   error: {
     color: "red",
-    marginBottom: 10
-  }
+    marginBottom: 10,
+    marginTop: -10
+  },
 });
