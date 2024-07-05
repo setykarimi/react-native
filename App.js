@@ -4,6 +4,7 @@ import RnList from "./components/rn-list";
 import SectionListComp from "./components/section-list";
 import RnForms from "./components/rn-forms";
 import LoginForm from "./components/rn-forms/login-form";
+import Posts from "./components/posts-networking";
 export default function App() {
   const data = [
     {
@@ -44,7 +45,7 @@ export default function App() {
     // <RnList />
     // <SectionListComp />
     // <RnForms />
-    <LoginForm />
+    <Posts />
     // <SafeAreaView style={styles.container}>
     //   <ScrollView>
     //     {data.map((item) => (
