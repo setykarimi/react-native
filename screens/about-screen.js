@@ -18,7 +18,7 @@ export default function AboutScreen() {
       />
       <Button
         title="Go back with data"
-        onPress={() => navigation.navigate("Home",{
+        onPress={() => navigation.navigate("home",{
           result: "Data from about"
         })}
       />
