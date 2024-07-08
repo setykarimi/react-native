@@ -1,11 +1,5 @@
-import { Platform, SafeAreaView, ScrollView, StyleSheet } from "react-native";
-import PokemanCard from "./components/pokeman/card";
-import RnList from "./components/rn-list";
-import SectionListComp from "./components/section-list";
-import RnForms from "./components/rn-forms";
-import LoginForm from "./components/rn-forms/login-form";
-import Posts from "./components/posts-networking";
-import RnNavigation from "./components/rn-navigation";
+import { Platform, StyleSheet } from "react-native";
+import GestureHandler from "./components/gesture-handler";
 export default function App() {
   const data = [
     {
@@ -47,7 +41,8 @@ export default function App() {
     // <SectionListComp />
     // <RnForms />
     // <Posts />
-    <RnNavigation />
+    // <RnNavigation />
+    <GestureHandler />
     // <SafeAreaView style={styles.container}>
     //   <ScrollView>
     //     {data.map((item) => (
