@@ -11,7 +11,9 @@ export default function RnNavigation() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="About" component={AboutScreen} />
+        <Stack.Screen name="About" component={AboutScreen} initialParams={{
+          name: "Hety"
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
