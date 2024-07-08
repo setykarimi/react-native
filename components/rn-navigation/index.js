@@ -41,6 +41,9 @@ export default function RnNavigation() {
           initialParams={{
             name: "Hety",
           }}
+          // options={({ route }) => ({
+          //   title: route.params?.name,
+          // })}
         />
       </Stack.Navigator>
     </NavigationContainer>
