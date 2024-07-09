@@ -5,6 +5,7 @@ import CourseListScreen from "../../screens/course-list-screen";
 import ProfileScreen from "../../screens/profile-screen";
 import SettingScreen from "../../screens/setting-screen";
 import Ionicons from '@expo/vector-icons/Ionicons'
+import RnNavigation, { AboutStack } from "../rn-navigation";
 
 const Tab = createBottomTabNavigator();
 
@@ -24,6 +25,7 @@ export default function BottomNavigation() {
           tabBarBadge: 2
         }}/>
         <Tab.Screen name="Settings" component={SettingScreen} />
+        <Tab.Screen name="about" component={AboutStack} />
       </Tab.Navigator>
     </NavigationContainer>
   );

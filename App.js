@@ -1,6 +1,7 @@
 import { Platform, StyleSheet } from "react-native";
 import GestureHandler from "./components/gesture-handler";
 import BottomNavigation from "./components/bottom-navigation";
+import RnNavigation from "./components/rn-navigation";
 export default function App() {
   const data = [
     {
@@ -42,9 +43,10 @@ export default function App() {
     // <SectionListComp />
     // <RnForms />
     // <Posts />
-    // <RnNavigation />
-    // <GestureHandler />
-    <BottomNavigation />
+<>
+    {/* <RnNavigation /> */}
+    {/* <GestureHandler /> */}
+    <BottomNavigation /></>
     // <SafeAreaView style={styles.container}>
     //   <ScrollView>
     //     {data.map((item) => (
